@@ -1,0 +1,37 @@
+{
+  "constructionSite": {
+    "geojson":{
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.00853705406189,
+              51.44606373172593
+            ],
+            [
+              7.009052038192749,
+              51.445883188884885
+            ],
+            [
+              7.009330987930298,
+              51.44626433404546
+            ],
+            [
+              7.008762359619141,
+              51.446458248783316
+            ],
+            [
+              7.00853705406189,
+              51.44606373172593
+            ]
+          ]
+        ]
+      }
+    },
+    "marker": "<a href=\"http://www.phil-hqe.de\" title=\"Phil-HQE\"> Phil-HQE</a>",
+	"status": "under construction"
+	}
+}

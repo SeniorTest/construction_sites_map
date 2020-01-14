@@ -1,0 +1,41 @@
+{
+  "constructionSite": {
+    "geojson":{
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.013740539550781,
+              51.4470968242541
+            ],
+            [
+              7.013831734657288,
+              51.44625764731566
+            ],
+            [
+              7.014212608337402,
+              51.44598349055138
+            ],
+            [
+              7.015205025672913,
+              51.44663210267576
+            ],
+            [
+              7.014040946960448,
+              51.44721383973346
+            ],
+            [
+              7.013740539550781,
+              51.4470968242541
+            ]
+          ]
+        ]
+      }
+    },
+	"marker": "<a href=\"https://sop-architekten.de/news/neue-firmenzentrale-fuer-hochtief#1\" title=\"Hochtief\"> Hochtief</a>",
+	"status": "planned"
+	}
+}

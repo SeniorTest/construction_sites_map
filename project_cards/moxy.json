@@ -1,0 +1,17 @@
+{
+  "constructionSite": {
+    "geojson":{
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.015618085861206,
+          51.4532313744015
+        ]
+      }
+    },
+	"marker": "<a href=\"https://c-l-p.de/project/neubau-hotel-essen\" title=\"Moxy\"> Moxy</a>",
+	"status": "under construction"
+	}
+}
