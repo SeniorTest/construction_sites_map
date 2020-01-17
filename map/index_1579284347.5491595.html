@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_918536b04e4a44dfa2054068e49ae6a3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_918536b04e4a44dfa2054068e49ae6a3" ></div>
+        
+</body>
+<script>    
+    
+            var map_918536b04e4a44dfa2054068e49ae6a3 = L.map(
+                "map_918536b04e4a44dfa2054068e49ae6a3",
+                {
+                    center: [51.4392, 6.9804],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_08fec3a87d50449081bee6c48c27c332 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+    
+            var marker_cluster_fb1b8395edf742fb800c8ca0ba65077f = L.markerClusterGroup(
+                {}
+            );
+            map_918536b04e4a44dfa2054068e49ae6a3.addLayer(marker_cluster_fb1b8395edf742fb800c8ca0ba65077f);
+        
+    
+            var feature_group_8daed08c505a460c8136bcbd63bd1a7c = L.featureGroup(
+                {}
+            ).addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+    
+            var feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e = L.featureGroup.subGroup(
+                marker_cluster_fb1b8395edf742fb800c8ca0ba65077f
+            );
+            feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e.addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+    
+        function geo_json_946f4163a6a54ee998941faaa8f4876c_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_946f4163a6a54ee998941faaa8f4876c = L.geoJson(null, {
+                onEachFeature: geo_json_946f4163a6a54ee998941faaa8f4876c_onEachFeature,
+            
+        });
+        function geo_json_946f4163a6a54ee998941faaa8f4876c_add (data) {
+            geo_json_946f4163a6a54ee998941faaa8f4876c.addData(data)
+                .addTo(feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e);
+        }
+            geo_json_946f4163a6a54ee998941faaa8f4876c_add({"geometry": {"coordinates": [[[6.989107131958008, 51.472589082040535], [6.985716819763183, 51.4714128811103], [6.984214782714844, 51.469889121180685], [6.983485221862793, 51.46841877826675], [6.983742713928223, 51.467349408203866], [6.983399391174316, 51.46630674826172], [6.985716819763183, 51.466066131045416], [6.9867467880249015, 51.466707774135976], [6.990909576416016, 51.47090496678842], [6.989107131958008, 51.472589082040535]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_4dfc49258dd14f2186c092c219f6572f = L.marker(
+                [51.472589082040535, 6.989107131958008],
+                {}
+            ).addTo(feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e);
+        
+    
+            var icon_b813546777774755acd05f649654634b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4dfc49258dd14f2186c092c219f6572f.setIcon(icon_b813546777774755acd05f649654634b);
+        
+    
+        var popup_7c7b0ffcbcad41ea9396ef286efd11ef = L.popup({"maxWidth": 2650});
+
+        
+            var html_2b7c126a9d94483080a3467406fa14d4 = $(`<div id="html_2b7c126a9d94483080a3467406fa14d4" style="width: 100.0%; height: 100.0%;"><a href="https://www.thelen-gruppe.com/essen51/" title="Essen51"> Essen51</a></div>`)[0];
+            popup_7c7b0ffcbcad41ea9396ef286efd11ef.setContent(html_2b7c126a9d94483080a3467406fa14d4);
+        
+
+        marker_4dfc49258dd14f2186c092c219f6572f.bindPopup(popup_7c7b0ffcbcad41ea9396ef286efd11ef)
+        ;
+
+        
+    
+    
+        function geo_json_4db3a88401a14fd588b7d15187e84fa3_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_4db3a88401a14fd588b7d15187e84fa3 = L.geoJson(null, {
+                onEachFeature: geo_json_4db3a88401a14fd588b7d15187e84fa3_onEachFeature,
+            
+        });
+        function geo_json_4db3a88401a14fd588b7d15187e84fa3_add (data) {
+            geo_json_4db3a88401a14fd588b7d15187e84fa3.addData(data)
+                .addTo(feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e);
+        }
+            geo_json_4db3a88401a14fd588b7d15187e84fa3_add({"geometry": {"coordinates": [[[7.013740539550781, 51.4470968242541], [7.013831734657288, 51.44625764731566], [7.014212608337402, 51.44598349055138], [7.015205025672913, 51.44663210267576], [7.014040946960448, 51.44721383973346], [7.013740539550781, 51.4470968242541]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_cb024a3c233a48b7a1e6144532080b3b = L.marker(
+                [51.4470968242541, 7.013740539550781],
+                {}
+            ).addTo(feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e);
+        
+    
+            var icon_6b3df98a70494158aa40c4c9beae5a2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cb024a3c233a48b7a1e6144532080b3b.setIcon(icon_6b3df98a70494158aa40c4c9beae5a2e);
+        
+    
+        var popup_03ceabaf497a4382865feb29701f042c = L.popup({"maxWidth": 2650});
+
+        
+            var html_86e86603f9eb40f99682fd366f5063e8 = $(`<div id="html_86e86603f9eb40f99682fd366f5063e8" style="width: 100.0%; height: 100.0%;"><a href="https://sop-architekten.de/news/neue-firmenzentrale-fuer-hochtief#1" title="Hochtief"> Hochtief</a></div>`)[0];
+            popup_03ceabaf497a4382865feb29701f042c.setContent(html_86e86603f9eb40f99682fd366f5063e8);
+        
+
+        marker_cb024a3c233a48b7a1e6144532080b3b.bindPopup(popup_03ceabaf497a4382865feb29701f042c)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_8f489e5952cb42afa58085735819d528 = L.featureGroup.subGroup(
+                marker_cluster_fb1b8395edf742fb800c8ca0ba65077f
+            );
+            feature_group_sub_group_8f489e5952cb42afa58085735819d528.addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+    
+        function geo_json_a0d8e0b5ea354b8da721812718e4a725_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_a0d8e0b5ea354b8da721812718e4a725 = L.geoJson(null, {
+                onEachFeature: geo_json_a0d8e0b5ea354b8da721812718e4a725_onEachFeature,
+            
+        });
+        function geo_json_a0d8e0b5ea354b8da721812718e4a725_add (data) {
+            geo_json_a0d8e0b5ea354b8da721812718e4a725.addData(data)
+                .addTo(feature_group_sub_group_8f489e5952cb42afa58085735819d528);
+        }
+            geo_json_a0d8e0b5ea354b8da721812718e4a725_add({"geometry": {"coordinates": [7.015618085861206, 51.4532313744015], "type": "Point"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_2d62001bd76a4d53bedce8aff7bd2daa = L.marker(
+                [51.4532313744015, 7.015618085861206],
+                {}
+            ).addTo(feature_group_sub_group_8f489e5952cb42afa58085735819d528);
+        
+    
+            var icon_2c73304141e148a7b5ed0839d66c02e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2d62001bd76a4d53bedce8aff7bd2daa.setIcon(icon_2c73304141e148a7b5ed0839d66c02e0);
+        
+    
+        var popup_b63ba8c3892e49dda20d39d4ef08da8a = L.popup({"maxWidth": 2650});
+
+        
+            var html_c7c6f84836a64b56a9486dc035208ce1 = $(`<div id="html_c7c6f84836a64b56a9486dc035208ce1" style="width: 100.0%; height: 100.0%;"><a href="https://c-l-p.de/project/neubau-hotel-essen" title="Moxy"> Moxy</a></div>`)[0];
+            popup_b63ba8c3892e49dda20d39d4ef08da8a.setContent(html_c7c6f84836a64b56a9486dc035208ce1);
+        
+
+        marker_2d62001bd76a4d53bedce8aff7bd2daa.bindPopup(popup_b63ba8c3892e49dda20d39d4ef08da8a)
+        ;
+
+        
+    
+    
+        function geo_json_cf577b368cdb47b7ad9465f668c642cb_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_cf577b368cdb47b7ad9465f668c642cb = L.geoJson(null, {
+                onEachFeature: geo_json_cf577b368cdb47b7ad9465f668c642cb_onEachFeature,
+            
+        });
+        function geo_json_cf577b368cdb47b7ad9465f668c642cb_add (data) {
+            geo_json_cf577b368cdb47b7ad9465f668c642cb.addData(data)
+                .addTo(feature_group_sub_group_8f489e5952cb42afa58085735819d528);
+        }
+            geo_json_cf577b368cdb47b7ad9465f668c642cb_add({"geometry": {"coordinates": [[[7.00853705406189, 51.44606373172593], [7.009052038192749, 51.445883188884885], [7.009330987930298, 51.44626433404546], [7.008762359619141, 51.446458248783316], [7.00853705406189, 51.44606373172593]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_da5a22dbcf9d4a13bb31cd95d27d9a36 = L.marker(
+                [51.44606373172593, 7.00853705406189],
+                {}
+            ).addTo(feature_group_sub_group_8f489e5952cb42afa58085735819d528);
+        
+    
+            var icon_5b829a531b5a4dd3b7d4e024af773f25 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_da5a22dbcf9d4a13bb31cd95d27d9a36.setIcon(icon_5b829a531b5a4dd3b7d4e024af773f25);
+        
+    
+        var popup_1ba1b84899634a088cefef6a63cb875c = L.popup({"maxWidth": 2650});
+
+        
+            var html_d37e1d6aea284f218ab890f445c23145 = $(`<div id="html_d37e1d6aea284f218ab890f445c23145" style="width: 100.0%; height: 100.0%;"><a href="http://www.phil-hqe.de" title="Phil-HQE"> Phil-HQE</a></div>`)[0];
+            popup_1ba1b84899634a088cefef6a63cb875c.setContent(html_d37e1d6aea284f218ab890f445c23145);
+        
+
+        marker_da5a22dbcf9d4a13bb31cd95d27d9a36.bindPopup(popup_1ba1b84899634a088cefef6a63cb875c)
+        ;
+
+        
+    
+    
+            var feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101 = L.featureGroup.subGroup(
+                marker_cluster_fb1b8395edf742fb800c8ca0ba65077f
+            );
+            feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101.addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+    
+        function geo_json_619573ff6e30443894161fa088607f48_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_619573ff6e30443894161fa088607f48 = L.geoJson(null, {
+                onEachFeature: geo_json_619573ff6e30443894161fa088607f48_onEachFeature,
+            
+        });
+        function geo_json_619573ff6e30443894161fa088607f48_add (data) {
+            geo_json_619573ff6e30443894161fa088607f48.addData(data)
+                .addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        }
+            geo_json_619573ff6e30443894161fa088607f48_add({"geometry": {"coordinates": [[[7.007603645324707, 51.45196107201506], [7.007603645324707, 51.45180061025183], [7.008054256439209, 51.45178723841278], [7.008043527603149, 51.45195438611951], [7.007603645324707, 51.45196107201506]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_f161bf09b76e46279005a38d25a691c4 = L.marker(
+                [51.45196107201506, 7.007603645324707],
+                {}
+            ).addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        
+    
+            var icon_23980f9856174b50999592c71f723306 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_f161bf09b76e46279005a38d25a691c4.setIcon(icon_23980f9856174b50999592c71f723306);
+        
+    
+        var popup_8cc97f1889d64a668c2767f9698d7731 = L.popup({"maxWidth": 2650});
+
+        
+            var html_d5f82f9ad6554316a11ea45c8841b253 = $(`<div id="html_d5f82f9ad6554316a11ea45c8841b253" style="width: 100.0%; height: 100.0%;"><a href="https://harfid.de/entwickeln-aktuelle/headquarter-harfid" title="Harfid"> Harfid</a></div>`)[0];
+            popup_8cc97f1889d64a668c2767f9698d7731.setContent(html_d5f82f9ad6554316a11ea45c8841b253);
+        
+
+        marker_f161bf09b76e46279005a38d25a691c4.bindPopup(popup_8cc97f1889d64a668c2767f9698d7731)
+        ;
+
+        
+    
+    
+        function geo_json_af57772608fa4754b72dd177fdd3f341_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_af57772608fa4754b72dd177fdd3f341 = L.geoJson(null, {
+                onEachFeature: geo_json_af57772608fa4754b72dd177fdd3f341_onEachFeature,
+            
+        });
+        function geo_json_af57772608fa4754b72dd177fdd3f341_add (data) {
+            geo_json_af57772608fa4754b72dd177fdd3f341.addData(data)
+                .addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        }
+            geo_json_af57772608fa4754b72dd177fdd3f341_add({"geometry": {"coordinates": [[[6.998999118804932, 51.45384645548734], [7.000608444213867, 51.45233548060268], [7.0017242431640625, 51.454127250619074], [6.998999118804932, 51.45384645548734]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_0a2e2c1dff8b48a2a5b55b49b5b6d48b = L.marker(
+                [51.45384645548734, 6.998999118804932],
+                {}
+            ).addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        
+    
+            var icon_824c8a70efef49608b74e1afbbc6f646 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_0a2e2c1dff8b48a2a5b55b49b5b6d48b.setIcon(icon_824c8a70efef49608b74e1afbbc6f646);
+        
+    
+        var popup_6218685203364b549c7d234dd9e398de = L.popup({"maxWidth": 2650});
+
+        
+            var html_16680d3be03d47e98b7b82d337084623 = $(`<div id="html_16680d3be03d47e98b7b82d337084623" style="width: 100.0%; height: 100.0%;"><a href="https://www.waz.de/staedte/essen/mix-aus-bueros-und-wohnungen-auf-altem-siemens-areal-geplant-id216622537.html" title="Kontorhausviertel"> Kontorhausviertel</a></div>`)[0];
+            popup_6218685203364b549c7d234dd9e398de.setContent(html_16680d3be03d47e98b7b82d337084623);
+        
+
+        marker_0a2e2c1dff8b48a2a5b55b49b5b6d48b.bindPopup(popup_6218685203364b549c7d234dd9e398de)
+        ;
+
+        
+    
+    
+        function geo_json_a0e7de2e40224edd83a7c01fb669ec43_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_a0e7de2e40224edd83a7c01fb669ec43 = L.geoJson(null, {
+                onEachFeature: geo_json_a0e7de2e40224edd83a7c01fb669ec43_onEachFeature,
+            
+        });
+        function geo_json_a0e7de2e40224edd83a7c01fb669ec43_add (data) {
+            geo_json_a0e7de2e40224edd83a7c01fb669ec43.addData(data)
+                .addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        }
+            geo_json_a0e7de2e40224edd83a7c01fb669ec43_add({"geometry": {"coordinates": [[[7.002207040786743, 51.44944710626183], [7.002378702163696, 51.44841072370191], [7.002925872802734, 51.44792929928524], [7.004030942916869, 51.44797610465963], [7.004985809326172, 51.448484274207466], [7.003537416458129, 51.449701183556904], [7.002207040786743, 51.44944710626183]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_f00b56db90c347609a695681d682ebf2 = L.marker(
+                [51.44944710626183, 7.002207040786743],
+                {}
+            ).addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        
+    
+            var icon_4293718bda1846ca848c2b4f37bc6e7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_f00b56db90c347609a695681d682ebf2.setIcon(icon_4293718bda1846ca848c2b4f37bc6e7d);
+        
+    
+        var popup_29e096a89f6949d1ab1516e61159b9e5 = L.popup({"maxWidth": 2650});
+
+        
+            var html_3228b5b3ca384fe697de4b16b7e0d7cb = $(`<div id="html_3228b5b3ca384fe697de4b16b7e0d7cb" style="width: 100.0%; height: 100.0%;"><a href="https://www.lq-essen.de" title="Literaturquatier Essen"> Literaturquatier Essen</a></div>`)[0];
+            popup_29e096a89f6949d1ab1516e61159b9e5.setContent(html_3228b5b3ca384fe697de4b16b7e0d7cb);
+        
+
+        marker_f00b56db90c347609a695681d682ebf2.bindPopup(popup_29e096a89f6949d1ab1516e61159b9e5)
+        ;
+
+        
+    
+    
+        function geo_json_cb674a7d4ce24c63933708ee849b54f1_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_918536b04e4a44dfa2054068e49ae6a3.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_cb674a7d4ce24c63933708ee849b54f1 = L.geoJson(null, {
+                onEachFeature: geo_json_cb674a7d4ce24c63933708ee849b54f1_onEachFeature,
+            
+        });
+        function geo_json_cb674a7d4ce24c63933708ee849b54f1_add (data) {
+            geo_json_cb674a7d4ce24c63933708ee849b54f1.addData(data)
+                .addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        }
+            geo_json_cb674a7d4ce24c63933708ee849b54f1_add({"geometry": {"coordinates": [[[7.00153112411499, 51.45105178123294], [7.0015740394592285, 51.45062387342189], [7.004148960113525, 51.45083782782875], [7.003998756408691, 51.4512657336345], [7.00153112411499, 51.45105178123294]]], "type": "Polygon"}, "properties": {}, "type": "Feature"});
+        
+    
+            var marker_4629cfa379c242c3bf86436bbbae838a = L.marker(
+                [51.45105178123294, 7.00153112411499],
+                {}
+            ).addTo(feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101);
+        
+    
+            var icon_52b5a0825cad453ea2ae3693eef8e536 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_4629cfa379c242c3bf86436bbbae838a.setIcon(icon_52b5a0825cad453ea2ae3693eef8e536);
+        
+    
+        var popup_b1ec6b1fcd8c43978ddaa8869bd213bc = L.popup({"maxWidth": 2650});
+
+        
+            var html_6d102830182644d388314221a6d8cdad = $(`<div id="html_6d102830182644d388314221a6d8cdad" style="width: 100.0%; height: 100.0%;"><a href="https://www.immobilienscout24.de/expose/108317622?referrer=com_otp_search#/" title="Trium"> Trium</a></div>`)[0];
+            popup_b1ec6b1fcd8c43978ddaa8869bd213bc.setContent(html_6d102830182644d388314221a6d8cdad);
+        
+
+        marker_4629cfa379c242c3bf86436bbbae838a.bindPopup(popup_b1ec6b1fcd8c43978ddaa8869bd213bc)
+        ;
+
+        
+    
+    
+            var layer_control_77a2d1e439e44493882af0bb287afaa8 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_08fec3a87d50449081bee6c48c27c332,
+                },
+                overlays :  {
+                    "macro_element_fb1b8395edf742fb800c8ca0ba65077f" : marker_cluster_fb1b8395edf742fb800c8ca0ba65077f,
+                    "Projects" : feature_group_8daed08c505a460c8136bcbd63bd1a7c,
+                    "planned" : feature_group_sub_group_d02de8e846e64beebb52dfad280f7f9e,
+                    "under construction" : feature_group_sub_group_8f489e5952cb42afa58085735819d528,
+                    "unknown" : feature_group_sub_group_5efacfd7ef3e4be784e4b10c90b48101,
+                },
+            };
+            L.control.layers(
+                layer_control_77a2d1e439e44493882af0bb287afaa8.base_layers,
+                layer_control_77a2d1e439e44493882af0bb287afaa8.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_918536b04e4a44dfa2054068e49ae6a3);
+        
+</script>
