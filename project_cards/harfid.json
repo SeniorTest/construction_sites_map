@@ -1,36 +1,36 @@
-{
-  "constructionSite": {
-    "geojson": {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              7.007603645324707,
-              51.45196107201506
-            ],
-            [
-              7.007603645324707,
-              51.45180061025183
-            ],
-            [
-              7.008054256439209,
-              51.45178723841278
-            ],
-            [
-              7.008043527603149,
-              51.45195438611951
-            ],
-            [
-              7.007603645324707,
-              51.45196107201506
-            ]
-          ]
-        ]
-      }
-    },
-    "marker": "<a href=\"https://harfid.de/entwickeln-aktuelle/headquarter-harfid\" title=\"Harfid\"> Harfid</a>"
-  }
+{
+  "constructionSite": {
+    "geojson": {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              7.007603645324707,
+              51.45196107201506
+            ],
+            [
+              7.007603645324707,
+              51.45180061025183
+            ],
+            [
+              7.008054256439209,
+              51.45178723841278
+            ],
+            [
+              7.008043527603149,
+              51.45195438611951
+            ],
+            [
+              7.007603645324707,
+              51.45196107201506
+            ]
+          ]
+        ]
+      }
+    },
+    "marker": "<a href=\"https://harfid.de/entwickeln-aktuelle/headquarter-harfid\" title=\"Harfid\"> Harfid</a>"
+  }
 }
