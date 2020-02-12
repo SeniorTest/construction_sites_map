@@ -151,6 +151,7 @@ stock_injection_form = dbc.Row([
     )])
 
 app = dash.Dash()
+server = app.server
 
 if not glob.glob("map/*.html"):
     create_map()
@@ -194,4 +195,4 @@ def click_or_upload_data(list_of_contents, filename):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(host='0.0.0.0', debug=True, port=8050)
