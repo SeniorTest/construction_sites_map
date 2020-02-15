@@ -2,6 +2,7 @@ import base64
 import json
 import glob
 import time
+import os
 
 # external modules
 import dash
@@ -195,4 +196,6 @@ def click_or_upload_data(list_of_contents, filename):
 
 
 if __name__ == '__main__':
-    app.run_server(host='0.0.0.0', debug=True, port=8050)
+    port = int(os.environ.get('PORT', 8050))
+    app.run_server(host='0.0.0.0', debug=False, port=port)
+    # app.run_server(host='0.0.0.0', debug=True, port=port)
