@@ -79,7 +79,7 @@ docker run -p 8050:8050 -it folium_app
 [page](http://127.0.0.1:8050).
 
 ## Heroku
-An easy way to deploy and show the app to others you can use [Heroku](https://devcenter.heroku.com). 
+An easy way to deploy and show the app to others is the usage of [Heroku](https://devcenter.heroku.com). 
 After you have created an account, you can run the following commands to deploy your app:
 
 ```
