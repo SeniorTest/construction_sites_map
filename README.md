@@ -95,4 +95,11 @@ References:
 
 [https://medium.com/@justkrup/deploy-a-docker-container-free-on-heroku-5c803d2fdeb1](https://medium.com/@justkrup/deploy-a-docker-container-free-on-heroku-5c803d2fdeb1)
 
- 
+
+## Todos
+
+* ~~Configure heigth of iframe to % size~~
+* enable updating and deletion of entries
+* create admin and viewer mode
+* ~~test updload of incorrect json~~
+* create usage guide/help section

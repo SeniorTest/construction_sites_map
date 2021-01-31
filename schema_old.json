@@ -1,0 +1,367 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "constructionSite": {
+                "geojson": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                            [
+                                [
+                                    6.989107131958008,
+                                    51.472589082040535
+                                ],
+                                [
+                                    6.985716819763183,
+                                    51.4714128811103
+                                ],
+                                [
+                                    6.984214782714844,
+                                    51.469889121180685
+                                ],
+                                [
+                                    6.983485221862793,
+                                    51.46841877826675
+                                ],
+                                [
+                                    6.983742713928223,
+                                    51.467349408203866
+                                ],
+                                [
+                                    6.983399391174316,
+                                    51.46630674826172
+                                ],
+                                [
+                                    6.985716819763183,
+                                    51.466066131045416
+                                ],
+                                [
+                                    6.9867467880249015,
+                                    51.466707774135976
+                                ],
+                                [
+                                    6.990909576416016,
+                                    51.47090496678842
+                                ],
+                                [
+                                    6.989107131958008,
+                                    51.472589082040535
+                                ]
+                            ]
+                        ]
+                    }
+                },
+                "marker": "<a href=\"https://www.thelen-gruppe.com/essen51/\" title=\"Essen51\"> Essen51</a>",
+                "status": "planned"
+            }
+        }
+    ],
+    "required": [
+        "constructionSite"
+    ],
+    "properties": {
+        "constructionSite": {
+            "$id": "#/properties/constructionSite",
+            "type": "object",
+            "title": "The constructionSite schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+                "geojson",
+                "marker",
+                "status"
+            ],
+            "properties": {
+                "geojson": {
+                    "$id": "#/properties/constructionSite/properties/geojson",
+                    "type": "object",
+                    "title": "The geojson schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "required": [
+                        "type",
+                        "properties",
+                        "geometry"
+                    ],
+                    "properties": {
+                        "type": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/type",
+                            "type": "string",
+                            "title": "The type schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": ""
+                        },
+                        "properties": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/properties",
+                            "type": "object",
+                            "title": "The properties schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "required": [],
+                            "additionalProperties": true
+                        },
+                        "geometry": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry",
+                            "type": "object",
+                            "title": "The geometry schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "required": [
+                                "type",
+                                "coordinates"
+                            ],
+                            "properties": {
+                                "type": {
+                                    "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/type",
+                                    "type": "string",
+                                    "title": "The type schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": ""
+                                },
+                                "coordinates": {
+                                    "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates",
+                                    "type": "array",
+                                    "title": "The coordinates schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items",
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0",
+                                                "type": "array",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": [],
+                                                "additionalItems": true,
+                                                "items": {
+                                                    "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items",
+                                                    "anyOf": [
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/0",
+                                                            "type": "array",
+                                                            "title": "The first anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/0/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/0/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/1",
+                                                            "type": "array",
+                                                            "title": "The second anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/1/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/1/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/2",
+                                                            "type": "array",
+                                                            "title": "The third anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/2/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/2/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/3",
+                                                            "type": "array",
+                                                            "title": "The fourth anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/3/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/3/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/4",
+                                                            "type": "array",
+                                                            "title": "The fifth anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/4/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/4/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/5",
+                                                            "type": "array",
+                                                            "title": "The sixth anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/5/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/5/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/6",
+                                                            "type": "array",
+                                                            "title": "The seventh anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/6/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/6/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/7",
+                                                            "type": "array",
+                                                            "title": "The eighth anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/7/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/7/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/8",
+                                                            "type": "array",
+                                                            "title": "The ninth anyOf schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": [],
+                                                            "additionalItems": true,
+                                                            "items": {
+                                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/8/items",
+                                                                "anyOf": [
+                                                                    {
+                                                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0/items/anyOf/8/items/anyOf/0",
+                                                                        "type": "number",
+                                                                        "title": "The first anyOf schema",
+                                                                        "description": "An explanation about the purpose of this instance.",
+                                                                        "default": 0.0
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "marker": {
+                    "$id": "#/properties/constructionSite/properties/marker",
+                    "type": "string",
+                    "title": "The marker schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "<a href=\"https://www.thelen-gruppe.com/essen51/\" title=\"Essen51\"> Essen51</a>"
+                    ]
+                },
+                "status": {
+                    "$id": "#/properties/constructionSite/properties/status",
+                    "type": "string",
+                    "title": "The status schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "planned"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

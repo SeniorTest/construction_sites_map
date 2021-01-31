@@ -5,6 +5,8 @@ import time
 import os
 
 # external modules
+import traceback
+
 import dash
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
@@ -14,17 +16,57 @@ import dash_bootstrap_components as dbc
 import folium
 from folium.plugins import MarkerCluster
 from folium import FeatureGroup, LayerControl
+from jsonschema import validate
 
 # ------------- configuration
 project_cards_folder = 'project_cards'
+schema = json.load(open('schema.json'))
+schema_point = json.load(open('schema_point.json'))
+schema_old = json.load(open('schema_old.json'))
+
+
+def validate_input_data(input_data):
+    valid_input = False
+    with open(input_data) as construction_site_json:
+        try:
+            data = json.load(construction_site_json)
+            validate(data, schema)
+            valid_input = True
+            return valid_input
+        except:
+            print(f'{input_data} is not valid against schema')
+
+    with open(input_data) as construction_site_json:
+        try:
+            data = json.load(construction_site_json)
+            validate(data, schema_point)
+            valid_input = True
+            return valid_input
+        except:
+            print(f'{input_data} is not valid against old schema')
+            traceback.print_exc()
+            # exit()
+
+    with open(input_data) as construction_site_json:
+        try:
+            data = json.load(construction_site_json)
+            validate(data, schema_old)
+            valid_input = True
+            return valid_input
+        except:
+            print(f'{input_data} is not valid against old schema')
+            traceback.print_exc()
+            # exit()
+    return valid_input
 
 
 # ------------ functions
 def create_map():
     status_color_map = {
         'unknown': 'gray',
-        'planned': 'blue',
-        'under construction': 'green'
+        'planned': 'red',
+        'under construction': 'orange',
+        'completed': 'green'
     }
 
     m = folium.Map(location=[51.4392, 6.9804], zoom_start=12)
@@ -34,16 +76,16 @@ def create_map():
     constructions_sites = []
 
     for file in glob.glob(project_cards_folder + '/*.json'):
-        print(file)
-        with open(file) as construction_site_json:
-            data = json.load(construction_site_json)
-            print(data)
-            constructions_sites.append(data)
+        if validate_input_data(file):
+            with open(file) as construction_site_json:
+                data = json.load(construction_site_json)
+                constructions_sites.append(data)
 
     constructions_sites_feature_group = FeatureGroup(name='Projects')
 
     # get all project status and create subgroups based on the status
     sub_groups = list(set([cs['constructionSite'].get('status', 'unknown') for cs in constructions_sites]))
+
     feature_groups = dict()
     for sub_group in sub_groups:
         feature_groups[sub_group] = folium.plugins.FeatureGroupSubGroup(marker_cluster, sub_group)
@@ -161,7 +203,11 @@ srcDoc = open(glob.glob("map/*.html")[-1], 'r').read()
 
 app.layout = html.Div([
     html.H1('Construction Sites Visualization'),
-    html.Iframe(id='map', srcDoc=srcDoc, width='100%', height='600'),
+    html.Div(id='map_div',
+            style={'width': '120vh', 'height': '70vh'},
+             children=[
+        html.Iframe(id='map', srcDoc=srcDoc, width='100%', height='100%')
+    ]),
     html.Button(id='map-submit-button', n_clicks=0, children='Update'),
     stock_injection_form
 ])
@@ -197,5 +243,5 @@ def click_or_upload_data(list_of_contents, filename):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8050))
-    app.run_server(host='0.0.0.0', debug=False, port=port)
-    # app.run_server(host='0.0.0.0', debug=True, port=port)
+    # app.run_server(host='0.0.0.0', debug=False, port=port)
+    app.run_server(host='127.0.0.1', debug=True, port=port)

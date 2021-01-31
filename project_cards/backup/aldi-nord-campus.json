@@ -1,0 +1,42 @@
+{
+  "constructionSite": {
+    "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  7.069230079650879,
+                  51.463285573389854
+                ],
+                [
+                  7.067384719848633,
+                  51.46197544423673
+                ],
+                [
+                  7.070860862731934,
+                  51.461467424853744
+                ],
+                [
+                  7.071805000305176,
+                  51.462162607847056
+                ],
+                [
+                  7.069230079650879,
+                  51.463285573389854
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "marker": "<a href=\"https://www.mbn.de/portfolio/aldi-nord-campus-in-essen/\" title=\"Aldi-Nord-Campus\">Aldi-Nord-Campus</a>",
+    "status": "under construction"
+  }
+}

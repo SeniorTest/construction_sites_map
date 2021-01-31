@@ -1,0 +1,198 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "constructionSite": {
+                "geojson": {
+                    "type": "Feature",
+                    "properties": {},
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            7.015618085861206,
+                            51.4532313744015
+                        ]
+                    }
+                },
+                "marker": "<a href=\"https://c-l-p.de/project/neubau-hotel-essen\" title=\"Moxy\"> Moxy</a>",
+                "status": "under construction"
+            }
+        }
+    ],
+    "required": [
+        "constructionSite"
+    ],
+    "properties": {
+        "constructionSite": {
+            "$id": "#/properties/constructionSite",
+            "type": "object",
+            "title": "The constructionSite schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "geojson": {
+                        "type": "Feature",
+                        "properties": {},
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                7.015618085861206,
+                                51.4532313744015
+                            ]
+                        }
+                    },
+                    "marker": "<a href=\"https://c-l-p.de/project/neubau-hotel-essen\" title=\"Moxy\"> Moxy</a>",
+                    "status": "under construction"
+                }
+            ],
+            "required": [
+                "geojson",
+                "marker",
+                "status"
+            ],
+            "properties": {
+                "geojson": {
+                    "$id": "#/properties/constructionSite/properties/geojson",
+                    "type": "object",
+                    "title": "The geojson schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                        {
+                            "type": "Feature",
+                            "properties": {},
+                            "geometry": {
+                                "type": "Point",
+                                "coordinates": [
+                                    7.015618085861206,
+                                    51.4532313744015
+                                ]
+                            }
+                        }
+                    ],
+                    "required": [
+                        "type",
+                        "properties",
+                        "geometry"
+                    ],
+                    "properties": {
+                        "type": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/type",
+                            "type": "string",
+                            "title": "The type schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                                "Feature"
+                            ]
+                        },
+                        "properties": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/properties",
+                            "type": "object",
+                            "title": "The properties schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {}
+                            ],
+                            "required": [],
+                            "additionalProperties": true
+                        },
+                        "geometry": {
+                            "$id": "#/properties/constructionSite/properties/geojson/properties/geometry",
+                            "type": "object",
+                            "title": "The geometry schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": {},
+                            "examples": [
+                                {
+                                    "type": "Point",
+                                    "coordinates": [
+                                        7.015618085861206,
+                                        51.4532313744015
+                                    ]
+                                }
+                            ],
+                            "required": [
+                                "type",
+                                "coordinates"
+                            ],
+                            "properties": {
+                                "type": {
+                                    "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/type",
+                                    "type": "string",
+                                    "title": "The type schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": "",
+                                    "examples": [
+                                        "Point"
+                                    ]
+                                },
+                                "coordinates": {
+                                    "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates",
+                                    "type": "array",
+                                    "title": "The coordinates schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": [],
+                                    "examples": [
+                                        [
+                                            7.015618085861206,
+                                            51.4532313744015
+                                        ]
+                                    ],
+                                    "additionalItems": true,
+                                    "items": {
+                                        "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items",
+                                        "anyOf": [
+                                            {
+                                                "$id": "#/properties/constructionSite/properties/geojson/properties/geometry/properties/coordinates/items/anyOf/0",
+                                                "type": "number",
+                                                "title": "The first anyOf schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": 0.0,
+                                                "examples": [
+                                                    7.015618085861206,
+                                                    51.4532313744015
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "additionalProperties": true
+                        }
+                    },
+                    "additionalProperties": true
+                },
+                "marker": {
+                    "$id": "#/properties/constructionSite/properties/marker",
+                    "type": "string",
+                    "title": "The marker schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "<a href=\"https://c-l-p.de/project/neubau-hotel-essen\" title=\"Moxy\"> Moxy</a>"
+                    ]
+                },
+                "status": {
+                    "$id": "#/properties/constructionSite/properties/status",
+                    "type": "string",
+                    "title": "The status schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "under construction"
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

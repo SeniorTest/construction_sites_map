@@ -1,0 +1,42 @@
+{
+  "constructionSite": {
+    "geojson": {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  7.016658782958984,
+                  51.4560526564235
+                ],
+                [
+                  7.017045021057129,
+                  51.4551167054122
+                ],
+                [
+                  7.018289566040039,
+                  51.455143447135974
+                ],
+                [
+                  7.018611431121826,
+                  51.45538412194509
+                ],
+                [
+                  7.016658782958984,
+                  51.4560526564235
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "marker": "<a href=\"https://www.essen.de/leben/planen__bauen_und_wohnen/staedtische_bauprojekte/buergerrathaus/buergerrathaus.de.html/\" title=\"Buergerrathaus\">Buergerrathaus</a>",
+    "status": "planned"
+  }
+}
